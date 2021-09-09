@@ -29,7 +29,7 @@ const createUser = (userObj) => {
     return user.save();
 };
 const updateUserByName = (name, updates) => Users.updateOne({
-    _id: userId
+    name: name
 }, {
     $set: updates
 });

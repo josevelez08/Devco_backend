@@ -4,9 +4,8 @@ const { SUCCESS } = constants;
 
 const updateQuestion = async (req, res, next) => {
     try {
-        const { name } = req.name;
-        console.log(name);
-        const data = await updateQuestionData(name, updates);
+        const {name} = req.body;
+        const data = await updateQuestionData(name, req.body);
         res.status(SUCCESS.CODE).send({ data });
         next();
     } catch (error) {
@@ -17,5 +16,5 @@ const updateQuestion = async (req, res, next) => {
     }
 };
 module.exports =  {
- updateQuestion
+    updateQuestion
 }
