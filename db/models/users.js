@@ -9,12 +9,27 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String
     },
-    email: {
-        type: String
-    },
-    age: {
-        type: Number
-    }
+    questions1:[
+        {
+            number: {
+                type: Number
+            },
+            answer: {
+                type: Boolean
+            }
+        }
+    ],
+    questions2 :[
+        {
+            number: {
+                type: Number
+            },
+            answer: {
+                type: Boolean
+            }
+        }
+    ]
+
 });
 
 module.exports = {

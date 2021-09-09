@@ -2,12 +2,9 @@ const { users } = require(__basedir + "/db/controllers");
 const { throwNotFoundError } = require(__basedir + "/errors");
 const { messages } = require(__basedir + "/config");
 
-/**
- * Method to get user data by id
- * @param {string} userId User Id
- * */
-const getUserData = async userId => {
-    const user = await users.getUserById(userId);
+const getUserData = async name => {
+
+    const user = await users.getUser({ name: name });
     if (!user) {
         throwNotFoundError(messages.USER_NOT_FOUND);
     }

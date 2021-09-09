@@ -28,6 +28,11 @@ const createUser = (userObj) => {
     const user = new Users(userObj);
     return user.save();
 };
+const updateUserByName = (name, updates) => Users.updateOne({
+    _id: userId
+}, {
+    $set: updates
+});
 
 /**
  * Method to get user by id from DB
@@ -44,5 +49,6 @@ module.exports = {
     getUser,
     getUserById,
     createUser,
-    updateUserById
+    updateUserById,
+    updateUserByName
 };

@@ -3,7 +3,6 @@
  * @summary User routes
  * @description This file contains routes for user entity
  * */
-const { authenticateUserWithToken } = require(__basedir + "/middlewares");
 const { getUser, addUser } = require('./controller');
 
 module.exports = router => {
@@ -35,9 +34,7 @@ module.exports = router => {
      *              description: Internal Error
      *
      */
-    router.get("/users",
-        authenticateUserWithToken,
-        getUser);
+    router.get("/users", getUser);
 
     router.post("/users", addUser);
 
