@@ -3,6 +3,7 @@ const { throwBadRequestError } = require(__basedir + "/errors");
 const { messages } = require(__basedir + "/config");
 
 const updateQuestionData = async (name, updates) => {
+    console.log(updates,":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
 
 
         const user = await users.updateUserByName(name,updates);

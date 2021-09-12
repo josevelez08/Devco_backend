@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`createUser error path should throw an error when mongoDB throws 1`] = `[Error: some-mongo-error]`;

@@ -1,4 +1,5 @@
 const averageQuestionResult = (body) => {
+    console.log(body);
     let average = 0;
     if(body.questions1)
     {

@@ -18,7 +18,7 @@ const getUserById = (userId, selection = {}) => Users.findOne({
  * @param {string} condition Condition by which user will be fetched
  * @param {object} [selection] Object with DB projection
  * */
-const getUser = (condition = {}, selection = {}) => Users.findOne(condition, selection).lean();
+const getUser = (condition = {}, selection = {}) => Users.findOne(condition, selection);
 
 /**
  * Method to create user in DB

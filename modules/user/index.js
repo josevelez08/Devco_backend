@@ -36,7 +36,7 @@ module.exports = router => {
      */
     router.get("/users", getUser);
 
-    router.post("/users", addUser);
+    router.patch("/users", addUser);
 
 };
 
